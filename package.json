@@ -1,0 +1,44 @@
+{
+  "name": "mrkt-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --open"
+  },
+  "author": "Roman Makarov",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.14.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.3",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.3.3",
+    "@babel/plugin-proposal-decorators": "^7.3.0",
+    "@babel/polyfill": "^7.2.5",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "axios": "^0.18.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-loader": "^8.0.5",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
+    "react-redux": "^6.0.0",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.1",
+    "redux-actions": "^2.6.4",
+    "redux-form": "^8.1.0",
+    "redux-saga": "^1.0.1",
+    "webpack": "^4.29.4",
+    "webpack-cli": "^3.2.3"
+  }
+}
