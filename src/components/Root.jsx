@@ -2,7 +2,9 @@ import React from 'react';
 import LoginForm from './LoginForm';
 
 const Root = () => (
-  <LoginForm />
+  <div className="app-container">
+    <LoginForm />
+  </div>
 );
 
 export default Root;

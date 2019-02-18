@@ -88,24 +88,28 @@ class LoginForm extends React.Component {
 
           <label className="login-form__label" htmlFor="password">
             Пароль
-            <Field
-              id="password"
-              name="password"
-              type="password"
-              component={this.renderInput}
-            />
-            <button
-              type="button"
-              className="login-form__restore-password"
-              onClick={this.onRestorePasswordClick}
-              disabled={submitting}
-            >
-            Напомнить
-            </button>
+            <div className="login-form__container">
+              <Field
+                id="password"
+                name="password"
+                type="password"
+                component={this.renderInput}
+              />
+              <button
+                type="button"
+                className="login-form__restore-password"
+                onClick={this.onRestorePasswordClick}
+                disabled={submitting}
+              >
+                <span className="text-in-button">
+                  Напомнить
+                </span>
+              </button>
+            </div>
           </label>
         </div>
         <button
-          className="login-form__submit"
+          className="login-form__submit button"
           type="submit"
           disabled={submitting || invalid}
         >

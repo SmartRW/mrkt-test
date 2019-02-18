@@ -40,14 +40,13 @@ export const passwordRestoreFailure = createAction('PASSWORD_RESTORE_FAILURE');
 
 export const restorePassword = ({ login }) => async (dispatch) => {
   dispatch(resetLoginError());
-  if (login !== '') {
+  if (login) {
     dispatch(postUserCredentialsRequest());
     dispatch(passwordRestoreRequest());
     try {
       const url = 'http://mrkt.little.team/api/public/users/reset-password';
       const credentials = JSON.stringify({ login });
       const { data } = await axios.post(url, credentials);
-      console.dir(data);
       if (data.error) {
         dispatch(passwordRestoreFailure());
         dispatch(setLoginError('Пользователя с такой почтой или телефоном не существует'));

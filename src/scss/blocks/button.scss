@@ -1,0 +1,28 @@
+.button {
+  position: relative;
+  color: #ffffff;
+  background-color: #362d90;
+  padding: 10px 20px 12px;
+  font-size: 16px;
+  line-height: 16px;
+  border-radius: 3px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+
+  &:disabled {
+    opacity: .7;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $blue;
+    outline: none;
+  }
+
+  &:active {
+    box-shadow: inset 0 3px 3px rgba(0,0,0,.2);
+  }
+}
