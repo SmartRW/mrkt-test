@@ -113,7 +113,9 @@ class LoginForm extends React.Component {
           type="submit"
           disabled={submitting || invalid}
         >
-          Войти на площадку
+          <span className="text-in-button">
+            Войти на площадку
+          </span>
         </button>
         {loginError && (
           <span className="login-form__error-message">
