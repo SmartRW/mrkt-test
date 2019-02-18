@@ -59,7 +59,7 @@
 
 .login-form__input {
   outline: 0;
-  border: 1px solid #e5e5e5;
+  border: 1px solid $grey;
   border-radius: 2px;
   display: block;
   font-size: 14px;
@@ -70,6 +70,11 @@
   transition: border-color .2s;
   padding: 0 10px 2px;
   background-color: #ffffff;
+
+  &:hover,
+  &:focus {
+    border-color: $grey-darker;
+  }
 }
 
 .login-form__submit {
