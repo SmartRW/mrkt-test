@@ -18,17 +18,6 @@ module.exports = {
   output: {
     path: `${__dirname}/dist`,
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: 'src/index.tpl.html',
-      inject: 'body',
-      filename: 'index.html',
-    }),
-    new MiniCssExtractPlugin({
-      filename: 'style.css',
-    }),
-    new webpack.HotModuleReplacementPlugin(),
-  ],
   module: {
     rules: [
       {
@@ -43,7 +32,7 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-          process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
+          process.env.NODE_ENV === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader,
           'css-loader',
           'sass-loader',
         ],
@@ -53,4 +42,15 @@ module.exports = {
         use: 'file-loader',
       }],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: 'src/index.tpl.html',
+      inject: 'body',
+      filename: 'index.html',
+    }),
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+    }),
+    new webpack.HotModuleReplacementPlugin(),
+  ],
 };
